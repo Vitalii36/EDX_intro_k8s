@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-password
+type: Opaque
+stringData:
+  password: mysqlpassword
+  # password: bXlzcWxwYXNzd29yZAo=
+
+# $ echo mysqlpassword | base64
+# bXlzcWxwYXNzd29yZAo=
+
+# $ echo "bXlzcWxwYXNzd29yZAo=" | base64 --decode
+# mysqlpassword
